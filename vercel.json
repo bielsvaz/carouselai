@@ -1,13 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "gerar.js", "use": "@vercel/node" }
+    { "src": "api/gerar.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/gerar", "dest": "/gerar.js" },
-    { "src": "/(.*)", "dest": "/gerar.js" }
+    { "src": "/api/gerar", "dest": "/api/gerar.js" },
+    { "src": "/(.*)", "dest": "/api/gerar.js" }
   ],
   "functions": {
-    "gerar.js": { "maxDuration": 300 }
+    "api/gerar.js": { "maxDuration": 300 }
   }
 }
